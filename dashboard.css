@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Couleur de fond légère */
+}
+
+.container {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1200px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.left-child {
+  width: 35%;
+  padding: 20px;
+  background-color: #017489; /* Bleu plus doux */
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.left-child img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.left-child h1 {
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+
+.left-child p {
+  margin-bottom: 15px;
+}
+
+.log-butt {
+  background-color: #fff;
+  color: #017489;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.log-butt:hover {
+  background-color: #f2f2f2;
+}
+
+.right-child {
+  width: 65%;
+  display: flex;
+}
+
+.upper, .lower {
+  padding: 20px;
+}
+
+.upper {
+  background-color: #f2dede; /* Bleu assorti à la partie gauche */
+  color: black;
+  border-top-right-radius: 10px;
+}
+
+.upper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.upper p {
+  margin-bottom: 10px;
+}
+
+.lower {
+  background-color: #f2dede; /* Rouge plus doux */
+  border-bottom-right-radius: 10px;
+  height: 100%;
+}
+
+.lower h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.appartement-interest {
+  margin-top: 10px;
+}
+
+.appartement-interest p {
+  margin-bottom: 5px;
+}

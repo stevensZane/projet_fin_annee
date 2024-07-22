@@ -1,0 +1,291 @@
+/* Style général pour le corps de la page */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(https://www.senegal-online.com/wp-content/uploads/2021/01/Dakar_Senegal_900.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #017489;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Assure que la barre de navigation est au-dessus du contenu */
+}
+
+/* Style du logo dans la barre de navigation */
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  color: #0F52BA;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+/* Style de la liste des liens dans la barre de navigation */
+.navbar-menu {
+  list-style: none;
+  display: inline-flex;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.6s;
+}
+
+.navbar-menu a:hover {
+  color: #ddd;
+  background: #0F52BA;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Style du menu de navigation mobile */
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding-top: 20px;
+}
+
+.mobile-nav-items a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.mobile-nav-items a:hover {
+  text-decoration: underline;
+}
+
+/* Styles spécifiques pour la version mobile */
+@media(max-width: 700px) {
+  .navlink-container {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav .menu-bar {
+    font-size: 20px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .mobile-nav .menu-bar:hover {
+    background-color: #a8a2fb;
+  }
+}
+
+/* Style du bouton de connexion */
+.login-btn {
+  background-color: #0F52BA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #0F52BA;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Style du contenu principal */
+.content {
+  color: #fff;
+  margin: 170px;
+  position: relative;
+}
+
+/* Style de la fenêtre modale */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media query pour ajustements spécifiques à la version mobile */
+@media(max-width:700px) {
+  .content {
+    margin: 120px 10px;
+  }
+
+  .content h1 {
+    font-size: 40px;
+  }
+
+  .content h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .content .accueil-btn {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+  }
+
+  .close {
+    font-size: 24px;
+  }
+
+  #LoginForm {
+    width: 100%;
+    max-width: 300px; /* Ajuster la largeur du formulaire pour une meilleure lisibilité */
+    margin: 0 auto;
+  }
+
+  #LoginForm .form-control {
+    width: calc(100% - 20px); /* Réduire légèrement la largeur des champs pour éviter le débordement */
+    margin-bottom: 10px;
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+}
+
+/* Style des boutons d'accueil */
+.content .accueil-btn {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.6;
+  border: none;
+}
+
+.content .accueil-btn a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content .accueil-btn {
+  background-color: #0F52BA;
+  transition: 0.4s;
+  margin-right: 10px;
+}
+
+.content .accueil-btn:hover {
+  background-color: #0F52BA;
+  opacity: 1;
+  transform: scale(1.1);
+}
+/* Styles par défaut pour les écrans de taille moyenne à grande */
+.accueil-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.accueil-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media query pour les petits écrans comme les téléphones */
+@media (max-width: 768px) {
+  .accueil-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
+/* Autre style à commenter */
+/*.content .deco {
+  width: 300px; 
+  height: 500px; 
+  position: absolute;
+  right: 32px;
+  top: 0;
+  background-image: url(image/dakar-senegal-march-01-2023-600nw-2274887025.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/

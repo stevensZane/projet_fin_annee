@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-child">
+        <img
+          src="Ai-Cybersecurity.jpg"
+          alt="Image de profil Admin"
+          style="
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 10px;
+          "
+        />
+        <h1>Bienvenue, Admin</h1>
+        <p>Vous êtes connecté en tant qu'administrateur</p>
+        <p>
+          Vous pouvez gérer les utilisateurs, les appartements et les annonces
+        </p>
+        <a href="appartement.html"
+          ><button class="log-butt">Déconnexion</button></a
+        >
+      </div>
+      <div class="right-child">
+        <div class="upper">
+          <h2>Statistiques</h2>
+          <p>
+            Nombre d'étudiants inscrits: <span id="etudiants-count">50</span>
+          </p>
+          <p>
+            Nombre d'appartements gérés: <span id="appartements-count">4</span>
+          </p>
+          <h2>Intérêt pour les Appartements</h2>
+          <div class="appartement-interest" id="apartmentsList">
+            <!-- Apartments will be dynamically added here -->
+          </div>
+        </div>
+        <div class="lower">
+          <h2>Liste des étudiants</h2>
+          <ul id="student-list">
+            <!-- Les étudiants seront ajoutés ici -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Récupération des éléments pour afficher les likes
+
+        // Function to render apartments and their like counts
+        function renderApartments() {
+          const apartmentsData =
+            JSON.parse(localStorage.getItem("apartmentsLikes")) || [];
+
+          const apartmentsListDiv = document.getElementById("apartmentsList");
+          apartmentsListDiv.innerHTML = ""; // Clear previous content
+
+          apartmentsData.forEach((apartment, index) => {
+            const apartmentName = `Appartement ${index + 1}`;
+            const apartmentId = `appartement${index + 1}`;
+
+            const apartmentHTML = `
+                  <p>${apartment.name} : <span style="color:red; font-weight:bold;" id="${apartmentId}-like-count">${apartment.count}</span></p>
+              `;
+            apartmentsListDiv.innerHTML += apartmentHTML;
+          });
+
+          if (apartmentsData.length < 1) {
+            const apartmentHTML = `No Apartment Liked!`;
+            apartmentsListDiv.innerHTML += apartmentHTML;
+          }
+        }
+
+        // Call renderApartments to initially render apartments on page load
+        renderApartments();
+
+        // Récupération des étudiants inscrits depuis localStorage
+        const studentListElement = document.getElementById("student-list");
+        const etudiantsCount = document.getElementById("etudiants-count");
+        let listeEtudiant =
+          JSON.parse(localStorage.getItem("listeEtudiant")) || [];
+
+        // Mise à jour du nombre d'étudiants inscrits
+        etudiantsCount.textContent = listeEtudiant.length;
+
+        // Affichage des étudiants dans la liste
+        if (listeEtudiant.length > 0) {
+          listeEtudiant.forEach((etudiant) => {
+            let listItem = document.createElement("li");
+            listItem.textContent = `${etudiant.nom} ${etudiant.prenom} - ${etudiant.nationalite} - ${etudiant.genre}`;
+            studentListElement.appendChild(listItem);
+          });
+        } else {
+          studentListElement.textContent =
+            "Aucun étudiant inscrit pour le moment.";
+        }
+      });
+    </script>
+  </body>
+</html>

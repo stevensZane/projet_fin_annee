@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="appartement.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="fontawesome-free-6.5.2-web/all.min.js"></script>
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="">
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#">
+          <img src="https://dit.sn/wp-content/uploads/2023/10/Logo-1.png" alt="Logo">
+        </a>
+      </div>
+      <div class="navlink-container">
+        <ul class="navbar-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="About us.html">À Propos</a></li>
+          <li><a href="appartement.html">Appartement</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+        <span onclick="showLoginForm()" class="login-btn">Se connecter</span>
+      </div>
+      <div class="mobile-nav">
+        <i class="fas fa-bars menu-bar" id="menu-bar"></i>
+        <div class="mobile-nav-items">
+          <div style="display: flex; justify-content: flex-end; width:100%; padding-right: 30px;">
+            <i class="fas fa-xmark close-btn" id="close-btn" style="color:red; font-size:20px; padding:5px 7px; border-radius:50%; background-color:white;"></i>
+          </div>
+          <a href="index.html">Accueil</a>
+          <a href="About us.html">À Propos</a>
+          <a href="appartement.html">Appartement</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="logInfo" class="container text-center">
+    <h3>Welcome,</h3>
+    <p id="username1">Admin</p>
+    <button onclick="logoutUser()" class="btn btn-danger">
+      Logout
+    </button>
+  </div>
+
+  <div class="properties text-center pt-5">
+
+    <p>Recent</p>
+
+    <h1>Nos Appartements</h1>
+
+    <p>Découvrez quelques-uns de nos appartements</p>
+
+
+    <section class="container my-4">
+      <div id="appartement" class="row g-4">
+
+        <a href="appartment1.html" class="col-md-4 block" style="text-decoration: none;">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-top position-relative"
+              style="height: 300px; border-top-left-radius: .25rem; border-top-right-radius: .25rem; overflow: hidden;">
+              <img src="./Appartement1/1.jpg" alt="Appartement 1" style="width: 100%; height: 100%; object-fit: cover;">
+              <div
+                class="overlay d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-white">
+                <span>View property</span>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Appartement à louer au point E  <i class="fa-solid fa-location-dot"></i></h3>
+              <!-- <p class="card-text">Spacious and fabulous home in prime location. This executive style…</p> -->
+              <div class="d-flex justify-content-around">
+                <div>
+                  <p class="mb-0">Bedrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-bed"></i> 4</p>
+                </div>
+                <div>
+                  <p class="mb-0">Bathrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-shower"></i> 5</p>
+                </div>
+                <!-- <div>
+                  <p class="mb-0">Area</p>
+                  <p class="mb-0"><i class="fa-regular fa-square"></i> 4530 sq ft</p>
+                </div> -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <p class="mb-0">A louer</p>
+              <h2 class="text-primary">200.000 Fcfa</h2>
+              <button onclick="deleteProperty(this)" class="btn btn-danger deleteBtn mt-2" style="display: none;">Supprimer</button> 
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="appartment2.html" class="col-md-4 block" style="text-decoration: none;">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-top position-relative"
+              style="height: 300px; border-top-left-radius: .25rem; border-top-right-radius: .25rem; overflow: hidden;">
+              <img src="./Appartement2/1.jpg" alt="Appartement 2" style="width: 100%; height: 100%; object-fit: cover;">
+              <div
+                class="overlay d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-white">
+                <span>View property</span>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h2 class="card-title">Appartement à louer, Mermoz <i class="fa-solid fa-location-dot"></i></h2>
+              <!-- <p class="card-text">Spacious and fabulous home in prime location. This executive style…</p> -->
+              <div class="d-flex justify-content-around">
+                <div>
+                  <p class="mb-0">Bedrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-bed"></i> 4</p>
+                </div>
+                <div>
+                  <p class="mb-0">Bathrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-shower"></i> 5</p>
+                </div>
+                <!-- <div>
+                  <p class="mb-0">Area</p>
+                  <p class="mb-0"><i class="fa-regular fa-square"></i> 4530 sq ft</p>
+                </div> -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <p class="mb-0">A louer</p>
+              <h2 class="text-primary">150.000 Fcfa</h2>
+              <button onclick="deleteProperty(this)" class="btn btn-danger deleteBtn mt-2" style="display: none;">Supprimer</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="appartment3.html" class="col-md-4 block" style="text-decoration: none;">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-top position-relative"
+              style="height: 300px; border-top-left-radius: .25rem; border-top-right-radius: .25rem; overflow: hidden;">
+              <img src="./Appartement3/1.jpg" alt="Appartement 1" style="width: 100%; height: 100%; object-fit: cover;">
+              <div
+                class="overlay d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-white">
+                <span>View property</span>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h2 class="card-title">Appartement à louer, Cité Keur Gorgui <i class="fa-solid fa-location-dot"></i></h2>
+              <!-- <p class="card-text">Spacious and fabulous home in prime location. This executive style…</p> -->
+              <div class="d-flex justify-content-around">
+                <div>
+                  <p class="mb-0">Bedrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-bed"></i> 4</p>
+                </div>
+                <div>
+                  <p class="mb-0">Bathrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-shower"></i> 5</p>
+                </div>
+                <!-- <div>
+                  <p class="mb-0">Area</p>
+                  <p class="mb-0"><i class="fa-regular fa-square"></i> 4530 sq ft</p>
+                </div> -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <p class="mb-0">A louer</p>
+              <h2 class="text-primary">250.000 Fcfa</h2>
+              <button onclick="deleteProperty(this)" class="btn btn-danger deleteBtn mt-2" style="display: none;">Supprimer</button>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="appartment4.html" class="col-md-4 block" style="text-decoration: none;">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-top position-relative"
+              style="height: 300px; border-top-left-radius: .25rem; border-top-right-radius: .25rem; overflow: hidden;">
+              <img src="./Appartement4/1.jpg" alt="Appartement 4" style="width: 100%; height: 100%; object-fit: cover;">
+              <div
+                class="overlay d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-white">
+                <span>View property</span>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h2 class="card-title">Appartement à louer, Liberté 6 <i class="fa-solid fa-location-dot"></i></h2>
+              <!-- <p class="card-text">Spacious and fabulous home in prime location. This executive style…</p> -->
+              <div class="d-flex justify-content-around">
+                <div>
+                  <p class="mb-0">Bedrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-bed"></i> 4</p>
+                </div>
+                <div>
+                  <p class="mb-0">Bathrooms</p>
+                  <p class="mb-0"><i class="fa-solid fa-shower"></i> 5</p>
+                </div>
+                <!-- <div>
+                  <p class="mb-0">Area</p>
+                  <p class="mb-0"><i class="fa-regular fa-square"></i> 4530 sq ft</p>
+                </div> -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <p class="mb-0">A louer</p>
+              <h2 class="text-primary">300.000 Fcfa</h2>
+              <button onclick="deleteProperty(this)" class="btn btn-danger deleteBtn mt-2" >Supprimer</button>
+            </div>
+          </div>
+        </a>
+        
+
+
+
+
+
+
+
+
+
+           
+    </section>
+
+    <div id="addBTN" class="">
+      <div class="p-3" id="addNewProperty">
+        <i class="fa-solid fa-square-plus" style="font-size: 3rem; color: #0F52BA;"></i>
+        <button class="btn btn-primary w-100" onclick="showAddPropertyForm()">Ajouter</button>
+      </div>
+    </div>
+    <div id="adminLogo" class="" style="display: none;">
+      <div class="p-3" id="adminDashboard">
+        <i class="fa-solid fa-user-tie" style="font-size: 3rem; color: #0F52BA; cursor: pointer;" onclick="redirectToDashboard()"></i>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Formulaire modal pour ajouter un nouvel appartement-->
+
+
+
+
+  <div id="AjouterAppartement" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAddPropertyForm()">&times;</span>
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Ajouter un nouvel appartement</h2>
+          <form id="AppartementFormulaire">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="image">Image URL</label>
+                  <input type="text" class="form-control" id="image" placeholder="Entrer l'URL de l'image">
+                </div>
+                <div class="form-group">
+                  <label for="address">Adresse</label>
+                  <input type="text" class="form-control" id="address" placeholder="Entrer l'adresse">
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control" id="description" rows="3"
+                    placeholder="Entrer la description"></textarea>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="bedrooms">Chambres</label>
+                  <input type="number" class="form-control" id="bedrooms" placeholder="Nombre de chambres">
+                </div>
+                <div class="form-group">
+                  <label for="bathrooms">Salles de bain</label>
+                  <input type="number" class="form-control" id="bathrooms" placeholder="Nombre de salles de bain">
+                </div>
+                <div class="form-group">
+                  <label for="area">Surface</label>
+                  <input type="text" class="form-control" id="area" placeholder="Surface en m²">
+                </div>
+                <div class="form-group">
+                  <label for="price">Prix</label>
+                  <input type="text" class="form-control" id="price" placeholder="Prix en $">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulaire modal pour se connecter -->
+  <div id="LoginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginForm()">&times;</span>
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Se connecter</h2>
+          <form id="LoginForm">
+            <div class="form-group">
+              <label for="username">Nom d'utilisateur</label>
+              <input type="text" class="form-control" id="username" placeholder="Entrer votre nom d'utilisateur"">
+            </div>
+            <div class="form-group">
+              <label for="password">Mot de Passe</label>
+              <input type="password" class="form-control" id="password" placeholder="Entrer votre mot de passe">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<script src="appartement.js"></script>
+
+</html>
